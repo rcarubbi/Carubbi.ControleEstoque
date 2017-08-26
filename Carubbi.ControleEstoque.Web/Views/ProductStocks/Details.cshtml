@@ -1,0 +1,58 @@
+﻿@model Carubbi.ControleEstoque.Web.Models.ProductStock
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductStock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Academies.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Academies.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Products.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Products.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

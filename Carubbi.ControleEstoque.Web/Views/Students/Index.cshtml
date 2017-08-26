@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Carubbi.ControleEstoque.Web.Models.Students>
+
+@{
+    ViewBag.Title = "Alunos";
+}
+
+<h2>Alunos</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Número 
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Academia
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Academies.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Alterar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

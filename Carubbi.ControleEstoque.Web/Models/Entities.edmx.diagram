@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f097901b03fa43dda4052476a528ca56" Name="Diagram1">
+        <EntityTypeShape EntityType="ControleEstoqueDBModel.Academies" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControleEstoqueDBModel.Products" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControleEstoqueDBModel.ProductStock" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControleEstoqueDBModel.Sales" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ControleEstoqueDBModel.Students" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="ControleEstoqueDBModel.FK_ProductStock_Academies" ManuallyRouted="false" />
+        <AssociationConnector Association="ControleEstoqueDBModel.FK_Students_Academies" ManuallyRouted="false" />
+        <AssociationConnector Association="ControleEstoqueDBModel.FK_ProductStock_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ControleEstoqueDBModel.FK_Sales_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="ControleEstoqueDBModel.FK_Sales_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="ControleEstoqueDBModel.FK_Sales_Academies" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

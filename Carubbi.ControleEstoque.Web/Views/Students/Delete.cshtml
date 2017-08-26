@@ -1,0 +1,48 @@
+﻿@model Carubbi.ControleEstoque.Web.Models.Students
+
+@{
+    ViewBag.Title = "Excluir aluno";
+}
+
+<h2>Excluir aluno</h2>
+
+<h3>Tem certeza que deseja excluir este aluno?</h3>
+<div>
+    <h4>Students</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Número
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationNumber)
+        </dd>
+
+        <dt>
+            Nome
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Academia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Academies.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
